@@ -1,0 +1,11 @@
+services:
+  api-json-server:
+    build: .
+    container_name: api-json-server
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./data:/app/data
+      - ./public:/app/public
+    environment:
+      - NODE_ENV=production
